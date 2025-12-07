@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-primary"><i class="bi bi-shield-lock-fill"></i> @ViewData["Title"]</h1>
+        <p class="lead text-muted">How we handle your jokes and your data.</p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm p-3">
+                <div class="card-body">
+                    <h3 class="card-title h5 text-info"><i class="bi bi-person-badge"></i> Account Information</h3>
+                    <p class="card-text">We store your username and hashed password safely. We never share your credentials with third parties. Your security is our setup, not a punchline.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm p-3">
+                <div class="card-body">
+                    <h3 class="card-title h5 text-info"><i class="bi bi-chat-quote"></i> Joke Ownership</h3>
+                    <p class="card-text">The jokes you submit are linked to your account. You have the right to edit or delete them at any time. If you delete a joke, it's gone from our database forever.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm p-3">
+                <div class="card-body">
+                    <h3 class="card-title h5 text-info"><i class="bi bi-cookie"></i> Cookies</h3>
+                    <p class="card-text">We use essential local cookies only to keep you logged in. No tracking, no invasive marketing—just functional code.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm p-3">
+                <div class="card-body">
+                    <h3 class="card-title h5 text-info"><i class="bi bi-code-slash"></i> Transparency</h3>
+                    <p class="card-text">This app is built on .NET 8.0. We follow standard industry practices to ensure your browsing experience is safe and hilarious.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-5 text-center">
+        <p class="text-muted small">Last updated: @DateTime.Now.ToShortDateString()</p>
+        <a asp-action="Index" class="btn btn-outline-primary mt-2">Back to Laughing</a>
+    </div>
+</div>

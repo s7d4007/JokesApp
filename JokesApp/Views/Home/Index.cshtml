@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4 text-primary mb-4">Welcome to the Programmer Jokes Club! 💻</h1>
+
+    @* --- Section 1: Introduction and Purpose --- *@
+    <p class="lead">
+        Tired of boring documentation? Need a laugh during a long coding session?
+        You've come to the right place! We house the best (and sometimes worst)
+        programmer jokes contributed by developers just like you.
+    </p>
+
+    <hr class="my-4" />
+
+    @* --- Section 2: Call to Action (The main goal) --- *@
+    <div class="row justify-content-center my-5">
+        <div class="col-md-8">
+            <div class="card bg-light shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">Ready for a chuckle?</h5>
+                    <p class="card-text">Explore our ever-growing collection of coding humor.</p>
+
+                    @* This link will take the user directly to the Jokes Index page (Jokes/Index) *@
+                    <a asp-area="" asp-controller="Jokes" asp-action="Index" class="btn btn-success btn-lg">
+                        View All Jokes Now &raquo;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* --- Section 3: Engagement and Stats (Simulated) --- *@
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <h2 class="text-info">1. Engage</h2>
+            <p>Read, rate, and share your favorite jokes. Every laugh counts!</p>
+        </div>
+        <div class="col-md-4">
+            <h2 class="text-info">2. Contribute</h2>
+            @* This link encourages registration/login for contribution *@
+            <p>
+                <strong>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <text>Add your own original joke now!</text>
+                    }
+                    else
+                    {
+                        <text>Register to unlock the ability to submit jokes.</text>
+                    }
+                </strong>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2 class="text-info">3. Grow</h2>
+            <p>We are constantly adding new jokes. Check back daily for fresh content!</p>
+        </div>
+    </div>
+</div>
