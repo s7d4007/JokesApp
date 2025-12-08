@@ -35,3 +35,29 @@ body {
 .hero-gradient {
     background: linear-gradient(135deg, #4e73df 0%, #224abe 100%) !important;
 }
+
+/* --- Modern Scrollbar Customization --- */
+
+/* 1. Define the width of the scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* 2. Style the "Track" (the background area) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+/* 3. Style the "Thumb" (the draggable part) */
+::-webkit-scrollbar-thumb {
+    /* We match your hero gradient theme here */
+    background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+    border-radius: 10px;
+    border: 3px solid #f1f1f1; /* Adds a nice gap effect around the thumb */
+}
+
+    /* 4. Add hover effect to the thumb */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #224abe;
+    }
